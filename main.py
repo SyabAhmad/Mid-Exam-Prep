@@ -72,5 +72,36 @@ print(data)
 data = pd.DataFrame(data)
 print(data)
 
+# printing specific multiple rows and columns
 print(data.iloc[[0, 2], :])
+print(data.iloc[[0,1,2], :2])
+# print(data.head(2).tail(2))
+# to write to CSV file
+data.to_csv('data.csv', index=False)
 
+# to write file to excel we must import necessary libraries
+# import openpyxl
+# data.to_excel('data.xls', index=False)
+
+# Adding a new column
+data["GPA"] = [3,4,2.2,3.4,]
+print(data)
+
+# finding average GPA in DataFrame
+
+average = data["GPA"].mean()
+print(data['GPA'].max())
+print(data['GPA'].min())
+print(data['GPA'].std())
+print(average)
+
+for index, line in data.iterrows():
+    # if GPA is greater then 3 show all rows and columns
+    if line["GPA"] > 3:
+        print(line)
+
+
+for index, line in data.iterrows():
+    # want to look for specific column
+    if line["Names"] == 'bob':
+        print(line)
