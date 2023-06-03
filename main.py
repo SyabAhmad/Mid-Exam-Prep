@@ -1,4 +1,4 @@
-# Mid Exam Preparation
+# Mid Exam Preparation for DataScience
 # list of Numpy operations
 
 import numpy as np
