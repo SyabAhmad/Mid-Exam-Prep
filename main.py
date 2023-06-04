@@ -95,12 +95,13 @@ print(data['GPA'].min())
 print(data['GPA'].std())
 print(average)
 
+# Filtering dataset
 for index, line in data.iterrows():
     # if GPA is greater then 3 show all rows and columns
     if line["GPA"] > 3:
         print(line)
 
-
+# Filtering dataset
 for index, line in data.iterrows():
     # want to look for specific column
     if line["Names"] == 'bob':
